@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Frequent item in an array</title>
+</head>
+<body>
+    <h1>Most Frequent item in an Array</h1>
+</body>
+
+<script>
+    let arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    function most_frequent(arr){
+        let maxFrequency = arr[0],
+        maxCount = 0, i,j;
+        let len = arr.length;
+        for(i=0; i<len; i++){
+            count = 0;
+            console.log("i", arr[i]);
+            for(j = i; j<len; j++){
+                
+                console.log("j", arr[j]);
+                if(arr[i] == arr[j]){
+                    count ++;  //calulate count of item
+                    console.log("count", count);
+                }
+            }
+            if(maxCount< count){
+                maxCount = count;
+                console.log("maxCount", maxCount);
+                maxFrequency = arr[i];
+                console.log("maxFrequency", maxFrequency);
+            }
+        }
+        document.write(`Most freq item =  ${maxFrequency} is ${maxCount} times`);
+        // console.log(`${item} ( ${maxFrequency} times ) `) ;
+
+    }
+
+    console.log(most_frequent(arr));
+
+    
+
+    //Find out only counts
+    // var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    // var counts = {};
+    // for (var i=0; i<arr.length; i++){
+    //     var num = arr[i];
+    //     if(counts[num]=counts[num]){
+    //         counts[num] = counts[num] + 1;
+    //     }
+    //     else{
+    //         counts[num] = 1;
+    //     }
+    // }
+    // console.log(counts);
+</script>

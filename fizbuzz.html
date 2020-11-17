@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz</title>
+</head>
+<body>
+    <h1>Fizz Buzz Program</h1>
+    <button onclick="fizBuz(n)">FizBuzzzzzzzz</button>
+</body>
+
+
+<script>
+   let n = prompt("Enter a number: ");
+    function fizBuz(n){
+        if(n % 3 === 0){
+            document.write("Fizz")
+        }
+        else if(n % 5 === 0){
+            document.write("Buzzzzz")
+        }
+        else if(n % 5 === 0 && n % 3){
+            document.write("FizzzBuzzzzz")
+        }
+        else if(n % 5 != 0 && n % 3){
+            document.write("Not FizzzBuzzzzz")
+        }
+    }
+
+</script>
